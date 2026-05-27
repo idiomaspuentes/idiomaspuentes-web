@@ -1,5 +1,5 @@
 ---
-const {titulo, subtitulo, progreso, porcentaje, descripcion, conoce, imagen} = Astro.props;
+const {titulo, subtitulo, progreso, porcentaje, descripcion, conoce, imagen, href = "/Proyectos"} = Astro.props;
 import { Image } from 'astro:assets';
 ---
 
@@ -23,7 +23,7 @@ import { Image } from 'astro:assets';
       </div>
       <div class="flex flex-col justify-between grow">
         <h1 class="mt-4 text-gray-700 text-start px-6">{descripcion}</h1>
-        <a href="/Proyectos" class="text-blue-900 cursor-pointer hover:text-black mt-2 px-6 py-2 my-4 flex justify-self-start"> {conoce}
+        <a href={href} class="text-blue-900 cursor-pointer hover:text-black mt-2 px-6 py-2 my-4 flex justify-self-start"> {conoce}
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 mt-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>

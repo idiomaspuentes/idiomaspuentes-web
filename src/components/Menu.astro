@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import logo from "../assets/LogoIp.png";
 import { HandHelping, Menu, X } from "@lucide/astro";
 const {pathname} =Astro.url
-const classActivo =" text-blue-900 border-secondary"
+const classActivo =" text-blue-900"
 const classInactivo ="text-gray-900 border-transparent"
 function usarClase(pathActual:string){ 
   return pathname.toLowerCase().replaceAll("/","")===pathActual.toLowerCase().replaceAll("/","")?classActivo:classInactivo
@@ -43,42 +43,42 @@ function usarClase(pathActual:string){
           <li class="p-2 text-2xl font-bold">
             <a
               href="/Nosotros"
-              class={"text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent hover:border-secondary"}>
+              class={"text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"}>
               Nosotros</a
             >
           </li>
           <li class="p-2 text-2xl font-bold">
             <a
               href="/Proyectos"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent hover:border-secondary"
+              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
               >Proyectos</a
             >
           </li>
           <li class="p-2 text-2xl font-bold">
             <a
               href="/Historias"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent hover:border-secondary"
+              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
               >Historias</a
             >
           </li>
           <li class="p-2 text-2xl font-bold">
             <a
               href="/Recursos"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent hover:border-secondary"
+              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
               >Recursos</a
             >
           </li>
           <li class="p-2 text-2xl font-bold">
             <a
               href="/Involucrate"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent hover:border-secondary"
+              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
               >Involúcrate</a
             >
           </li>
           <li class="p-2 text-2xl font-bold">
             <a
               href="/Contacto"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent hover:border-secondary"
+              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
               >Contacto</a
             >
           </li>
@@ -108,42 +108,42 @@ function usarClase(pathActual:string){
     <li class="mx-6">
       <a
         href="/Nosotros"
-        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Nosotros")} hover:border-secondary`}
+        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Nosotros")} `}
         >Nosotros</a
       >
     </li>
     <li class="mx-6">
       <a
         href="/Proyectos"
-        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Proyectos")} hover:border-secondary`}
+        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Proyectos")} `}
         >Proyectos</a
       >
     </li>
     <li class="mx-6">
       <a
         href="/Historias"
-        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Historias")} hover:border-secondary`}
+        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Historias")} `}
         >Historias</a
       >
     </li>
     <li class="mx-6">
       <a
         href="/Recursos"
-        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Recursos")} hover:border-secondary`}
+        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Recursos")} `}
         >Recursos</a
       >
     </li>
     <li class="mx-6">
       <a
         href="/Involucrate"
-        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Involucrate")} hover:border-secondary`}
+        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Involucrate")}`}
         >Involúcrate</a
       >
     </li>
     <li class="mx-6">
       <a
         href="/Contacto"
-        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Contacto")} hover:border-secondary`}
+        class={`text-sm md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 ${usarClase("/Contacto")}`}
         >Contacto</a
       >
     </li>

@@ -1,91 +1,142 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/LogoIp.png";
-import { Heart, HandHelping, Menu, X } from "@lucide/astro";
+import { HandHelping, Menu, X } from "@lucide/astro";
 
 const { pathname } = Astro.url;
 
-// Clases limpias para elementos activos e inactivos
-const classActivo = "bg-blue-800 text-white py-2.5 px-6 rounded-xl font-medium shadow-sm";
-const classInactivo = "text-gray-700 hover:text-blue-900 font-medium py-2 px-3 transition duration-300";
+// Clases para que el activo sea una píldora azul y los demás texto limpio
+const classActivo = "bg-blue-800 text-white font-medium py-2.5 px-6 rounded-xl transition duration-300 inline-flex items-center justify-center shadow-sm";
+const classInactivo = "text-gray-800 hover:text-blue-900 font-medium py-2 px-3 transition duration-300 inline-flex items-center justify-center";
 
-function usarClase(pathActual: string) {
-  const normalizedPath = pathname.toLowerCase().replaceAll("/", "");
-  const normalizedCurrent = pathActual.toLowerCase().replaceAll("/", "");
-  return normalizedPath === normalizedCurrent ? classActivo : classInactivo;
+function usarClase(pathActual: string) { 
+  return pathname.toLowerCase().replaceAll("/", "") === pathActual.toLowerCase().replaceAll("/", "") ? classActivo : classInactivo;
 }
-
-const navLinks = [
-  { href: "/", label: "Inicio" },
-  { href: "/Nosotros", label: "Nosotros" },
-  { href: "/Proyectos", label: "Proyectos" },
-  { href: "/Historias", label: "Historias" },
-  { href: "/Recursos", label: "Recursos" },
-  { href: "/Involucrate", label: "Involúcrate" },
-  { href: "/Contacto", label: "Contacto" },
-];
 ---
 
-<nav class="fixed z-50 w-full bg-white/90 backdrop-blur-md py-4 px-6 md:px-12 flex items-center justify-between shadow-sm border-b border-gray-100">
-  <!-- Logo / Título -->
+<nav
+  class="fixed z-50 w-full bg-gray-100 py-6 px-4 md:px-10 flex items-center justify-between shadow-lg"
+>
+  <!-- Logo original intacto -->
   <div class="flex-shrink-0">
-    <a href="/" class="text-blue-950 font-extrabold text-lg md:text-xl leading-tight block">
-      Idiomas<br />Puentes
+    <a href="/">
+      <Image src={logo} alt="logo Idiomas Puentes" class="md:h-10 h-7 w-auto" />
     </a>
   </div>
 
-  <!-- Botón Menú Móvil -->
+  <!-- Menú Móvil -->
   <div class="md:hidden text-blue-950">
-    <input type="checkbox" class="peer hidden" id="menu-toggle" />
-    <label class="cursor-pointer p-2 block" for="menu-toggle">
-      <Menu size="28" />
+    <input type="checkbox" class="peer hidden" id="menu" />
+    <label class="cursor-pointer" for="menu">
+      <Menu size="30" />
     </label>
-
-    <!-- Menú Desplegable Móvil -->
-    <div class="fixed inset-0 bg-white z-50 hidden peer-checked:flex flex-col p-6 overflow-y-auto">
-      <div class="flex justify-end w-full mb-6">
-        <label class="cursor-pointer p-2" for="menu-toggle">
-          <X size="28" />
+    <div
+      class="min-h-screen min-w-screen bg-white absolute top-0 left-0 hidden peer-checked:flex flex-col z-50"
+    >
+      <div class="flex justify-end w-full p-4">
+        <label class="cursor-pointer" for="menu">
+          <X size="30" />
         </label>
       </div>
-      <ul class="list-none p-0 m-0 flex flex-col items-center gap-4 text-center">
-        {navLinks.map((link) => (
+      <div class="p-6">
+        <ul class="list-none p-0 m-0 flex flex-col items-center text-center gap-4">
           <li class="w-full">
-            <a href={link.href} class={`block text-xl py-3 rounded-xl ${usarClase(link.href)}`}>
-              {link.label}
+            <a href="/" class={`text-lg transition duration-300 block py-2 ${usarClase("/")}`}>
+              Inicio
             </a>
           </li>
-        ))}
-        <li class="w-full mt-4">
-          <a
-            href="/Donar"
-            class="w-full bg-[#B35438] text-white font-medium py-3 px-6 rounded-xl transition duration-300 hover:bg-[#96432b] inline-flex items-center justify-center shadow-md"
-          >
-            Donar
-            <Heart class="ml-2 fill-current" size="20" />
-          </a>
-        </li>
-      </ul>
+          <li class="w-full">
+            <a href="/Nosotros" class={`text-lg transition duration-300 block py-2 ${usarClase("/Nosotros")}`}>
+              Nosotros
+            </a>
+          </li>
+          <li class="w-full">
+            <a href="/Proyectos" class={`text-lg transition duration-300 block py-2 ${usarClase("/Proyectos")}`}>
+              Proyectos
+            </a>
+          </li>
+          <li class="w-full">
+            <a href="/Historias" class={`text-lg transition duration-300 block py-2 ${usarClase("/Historias")}`}>
+              Historias
+            </a>
+          </li>
+          <li class="w-full">
+            <a href="/Recursos" class={`text-lg transition duration-300 block py-2 ${usarClase("/Recursos")}`}>
+              Recursos
+            </a>
+          </li>
+          <li class="w-full">
+            <a href="/Involucrate" class={`text-lg transition duration-300 block py-2 ${usarClase("/Involucrate")}`}>
+              Involúcrate
+            </a>
+          </li>
+          <li class="w-full">
+            <a href="/Contacto" class={`text-lg transition duration-300 block py-2 ${usarClase("/Contacto")}`}>
+              Contacto
+            </a>
+          </li>
+
+          <!-- Botón de donar móvil original intacto -->
+          <li class="flex justify-center items-center mt-4 w-full">
+            <a
+              href="#"
+              class="donateBtn bg-[#B35438] text-white font-medium text-sm md:text-base py-3 px-8 rounded-xl transition duration-300 hover:bg-[#8B4513] transform hover:scale-105 inline-flex items-center justify-center w-full"
+            >
+              Donar
+              <HandHelping class="ml-2" size="20" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <!-- Menú Escritorio -->
-  <ul class="list-none p-0 m-0 items-center hidden md:flex gap-2 lg:gap-4">
-    {navLinks.map((link) => (
-      <li>
-        <a href={link.href} class={`text-sm md:text-base inline-block ${usarClase(link.href)}`}>
-          {link.label}
-        </a>
-      </li>
-    ))}
+  <!-- Menú de Escritorio -->
+  <ul class="list-none p-0 m-0 items-center hidden md:flex gap-3 lg:gap-4">
+    <li>
+      <a href="/" class={`text-sm md:text-base ${usarClase("/")}`}>
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a href="/Nosotros" class={`text-sm md:text-base ${usarClase("/Nosotros")}`}>
+        Nosotros
+      </a>
+    </li>
+    <li>
+      <a href="/Proyectos" class={`text-sm md:text-base ${usarClase("/Proyectos")}`}>
+        Proyectos
+      </a>
+    </li>
+    <li>
+      <a href="/Historias" class={`text-sm md:text-base ${usarClase("/Historias")}`}>
+        Historias
+      </a>
+    </li>
+    <li>
+      <a href="/Recursos" class={`text-sm md:text-base ${usarClase("/Recursos")}`}>
+        Recursos
+      </a>
+    </li>
+    <li>
+      <a href="/Involucrate" class={`text-sm md:text-base ${usarClase("/Involucrate")}`}>
+        Involúcrate
+      </a>
+    </li>
+    <li>
+      <a href="/Contacto" class={`text-sm md:text-base ${usarClase("/Contacto")}`}>
+        Contacto
+      </a>
+    </li>
 
-    <li class="ml-4">
+    <!-- Botón de donar escritorio original intacto -->
+    <li>
       <a
-        href="/Donar"
-        class="donateBtn bg-[#B35438] text-white font-medium text-sm md:text-base py-2.5 px-6 rounded-xl cursor-pointer transition duration-300 hover:bg-[#96432b] transform hover:scale-105 inline-flex items-center justify-center shadow-md"
+        href="#"
+        class="donateBtn ml-6 bg-[#B35438] text-white font-medium text-sm md:text-base py-3 px-8 rounded-xl cursor-pointer transition duration-300 hover:bg-[#8B4513] transform hover:scale-105 inline-flex items-center justify-center"
       >
         Donar
-        <Heart class="ml-2 fill-current" size="18" />
+        <HandHelping class="ml-2" size="20" />
       </a>
     </li>
   </ul>

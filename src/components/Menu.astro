@@ -1,159 +1,91 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/LogoIp.png";
-import { HandHelping, Menu, X } from "@lucide/astro";
-const {pathname} =Astro.url
-const classActivo =" text-blue-900"
-const classInactivo ="text-gray-900 border-transparent"
-function usarClase(pathActual:string){ 
-  return pathname.toLowerCase().replaceAll("/","")===pathActual.toLowerCase().replaceAll("/","")?classActivo:classInactivo
+import { Heart, HandHelping, Menu, X } from "@lucide/astro";
+
+const { pathname } = Astro.url;
+
+// Clases limpias para elementos activos e inactivos
+const classActivo = "bg-blue-800 text-white py-2.5 px-6 rounded-xl font-medium shadow-sm";
+const classInactivo = "text-gray-700 hover:text-blue-900 font-medium py-2 px-3 transition duration-300";
+
+function usarClase(pathActual: string) {
+  const normalizedPath = pathname.toLowerCase().replaceAll("/", "");
+  const normalizedCurrent = pathActual.toLowerCase().replaceAll("/", "");
+  return normalizedPath === normalizedCurrent ? classActivo : classInactivo;
 }
+
+const navLinks = [
+  { href: "/", label: "Inicio" },
+  { href: "/Nosotros", label: "Nosotros" },
+  { href: "/Proyectos", label: "Proyectos" },
+  { href: "/Historias", label: "Historias" },
+  { href: "/Recursos", label: "Recursos" },
+  { href: "/Involucrate", label: "Involúcrate" },
+  { href: "/Contacto", label: "Contacto" },
+];
 ---
 
-<nav
-  class="fixed z-50 w-full bg-gray-100 py-6 px-4 md:px-10 flex items-center justify-between shadow-lg"
->
+<nav class="fixed z-50 w-full bg-white/90 backdrop-blur-md py-4 px-6 md:px-12 flex items-center justify-between shadow-sm border-b border-gray-100">
+  <!-- Logo / Título -->
   <div class="flex-shrink-0">
-    <a href="/">
-      <Image src={logo} alt="logo Idiomas Puentes" class="md:h-10 h-7 w-auto" />
+    <a href="/" class="text-blue-950 font-extrabold text-lg md:text-xl leading-tight block">
+      Idiomas<br />Puentes
     </a>
   </div>
+
+  <!-- Botón Menú Móvil -->
   <div class="md:hidden text-blue-950">
-    <input type="checkbox" class="peer hidden" id="menu" />
-    <label class="cursor-pointer" for="menu">
-      <Menu size="30" />
+    <input type="checkbox" class="peer hidden" id="menu-toggle" />
+    <label class="cursor-pointer p-2 block" for="menu-toggle">
+      <Menu size="28" />
     </label>
-    <div
-      class="min-h-screen min-w-screen bg-white absolute top-0 left-0 hidden peer-checked:flex flex-col"
-    >
-      <div class="flex justify-end w-full p-4">
-        <label class="cursor-pointer" for="menu">
-          <X size="30" />
+
+    <!-- Menú Desplegable Móvil -->
+    <div class="fixed inset-0 bg-white z-50 hidden peer-checked:flex flex-col p-6 overflow-y-auto">
+      <div class="flex justify-end w-full mb-6">
+        <label class="cursor-pointer p-2" for="menu-toggle">
+          <X size="28" />
         </label>
       </div>
-      <div class="p-6">
-        <ul class="list-none p-0 m-0 items-center text-center md:flex">
-          <li class="p-2 text-2xl font-bold">
-            <a
-              href="/"
-              class={"text-blue-950 transition duration-300 hover:text-blue-900 inline-block border-transparent"}>
-              Inicio
-              </a>
-          </li>
-          <li class="p-2 text-2xl font-bold">
-            <a
-              href="/Nosotros"
-              class={"text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"}>
-              Nosotros</a
-            >
-          </li>
-          <li class="p-2 text-2xl font-bold">
-            <a
-              href="/Proyectos"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
-              >Proyectos</a
-            >
-          </li>
-          <li class="p-2 text-2xl font-bold">
-            <a
-              href="/Historias"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
-              >Historias</a
-            >
-          </li>
-          <li class="p-2 text-2xl font-bold">
-            <a
-              href="/Recursos"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
-              >Recursos</a
-            >
-          </li>
-          <li class="p-2 text-2xl font-bold">
-            <a
-              href="/Involucrate"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
-              >Involúcrate</a
-            >
-          </li>
-          <li class="p-2 text-2xl font-bold">
-            <a
-              href="/Contacto"
-              class="text-blue-950 text-md md:text-base transition duration-300 hover:text-blue-900 inline-block pb-1 border-b-3 border-transparent"
-              >Contacto</a
-            >
-          </li>
-
-          <li class="flex justify-center items-center mt-4">
-            <a
-              href="#"
-              class="donateBtn bg-blue-700 text-white font-medium text-sm md:text-base py-3 px-8 rounded-xl transition duration-300 hover:bg-blue-900 transform hover:scale-105 inline-flex items-center justify-center"
-            >
-              Donar
-              <HandHelping class="ml-2" size="20" />
+      <ul class="list-none p-0 m-0 flex flex-col items-center gap-4 text-center">
+        {navLinks.map((link) => (
+          <li class="w-full">
+            <a href={link.href} class={`block text-xl py-3 rounded-xl ${usarClase(link.href)}`}>
+              {link.label}
             </a>
           </li>
-        </ul>
-      </div>
+        ))}
+        <li class="w-full mt-4">
+          <a
+            href="/Donar"
+            class="w-full bg-[#B35438] text-white font-medium py-3 px-6 rounded-xl transition duration-300 hover:bg-[#96432b] inline-flex items-center justify-center shadow-md"
+          >
+            Donar
+            <Heart class="ml-2 fill-current" size="20" />
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <ul class="list-none p-0 m-0 items-center hidden md:flex">
-    <li class="mx-6">
-      <a
-        href="/"
-        class={`transition duration-300 hover:text-gray-300 bg-blue-900 text-white inline-block items-center justify-center font-medium py-2 px-3 rounded-xl ${usarClase("/")} `}
-        >Inicio</a
-      >
-    </li>
-    <li class="mx-6">
-      <a
-        href="/Nosotros"
-        class={`bg-blue-900 text-white transition duration-300 hover:text-gray-300 inline-block items-center justify-center font-medium py-2 px-3 rounded-xl ${usarClase("/Nosotros")} `}
-        >Nosotros</a
-      >
-    </li>
-    <li class="mx-6">
-      <a
-        href="/Proyectos"
-        class={`text-gray-300 transition duration-300 hover:text-blue-900 inline-block ${usarClase("/Proyectos")} `}
-        >Proyectos</a
-      >
-    </li>
-    <li class="mx-6">
-      <a
-        href="/Historias"
-        class={`text-gray-300 transition duration-300 hover:text-blue-900 inline-block ${usarClase("/Historias")} `}
-        >Historias</a
-      >
-    </li>
-    <li class="mx-6">
-      <a
-        href="/Recursos"
-        class={`text-gray-300 transition duration-300 hover:text-blue-900 inline-block ${usarClase("/Recursos")} `}
-        >Recursos</a
-      >
-    </li>
-    <li class="mx-6">
-      <a
-        href="/Involucrate"
-        class={`text-gray-300 transition duration-300 hover:text-blue-900 inline-block ${usarClase("/Involucrate")}`}
-        >Involúcrate</a
-      >
-    </li>
-    <li class="mx-6">
-      <a
-        href="/Contacto"
-        class={`text-gray-300 transition duration-300 hover:text-blue-900 inline-block ${usarClase("/Contacto")}`}
-        >Contacto</a
-      >
-    </li>
+  <!-- Menú Escritorio -->
+  <ul class="list-none p-0 m-0 items-center hidden md:flex gap-2 lg:gap-4">
+    {navLinks.map((link) => (
+      <li>
+        <a href={link.href} class={`text-sm md:text-base inline-block ${usarClase(link.href)}`}>
+          {link.label}
+        </a>
+      </li>
+    ))}
 
-    <li>
+    <li class="ml-4">
       <a
-        class="donateBtn ml-10 bg-[#B35438] text-white font-medium text-sm md:text-base py-3 px-8 rounded-xl cursor-pointer transition duration-300 hover:bg-[#8B4513] transform hover:scale-105 inline-flex items-center justify-center"
+        href="/Donar"
+        class="donateBtn bg-[#B35438] text-white font-medium text-sm md:text-base py-2.5 px-6 rounded-xl cursor-pointer transition duration-300 hover:bg-[#96432b] transform hover:scale-105 inline-flex items-center justify-center shadow-md"
       >
         Donar
-        <HandHelping class="ml-2" size="20" />
+        <Heart class="ml-2 fill-current" size="18" />
       </a>
     </li>
   </ul>

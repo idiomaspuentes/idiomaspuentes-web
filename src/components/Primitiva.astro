@@ -2,48 +2,70 @@
 import { Eye } from "@lucide/astro";
 import Container from "../components/Container.astro";
 ---
-<section class="relative bg-blue-50/60 py-4 px-4">    
+<section class="relative bg-gray-50/60 py-16 px-4">    
     <Container>
-        <div class="p-4 mt-4">
-            <h2 class="text-4xl font-serif font-bold text-center">Siguiendo el Ejemplo de la Iglesia Primitiva</h2>
-            <div
-                style="background:#2bbbad"
-                class="bg-secondary w-24 h-1.5 mx-auto mt-4 mb-12 rounded-full"
-            >
-            </div>
-            <div class="flex justify-center items-center">
-                <p class="text-gray-600 max-w-2xl">Así como la iglesia primitiva fue movida por la gracia de Dios para apoyarse y fortalecerse mutuamente
-                    a través de fronteras culturales y geográficas, la iglesia global de hoy continúa este patrón divino.
-                    A través del ánimo mutuo, el compartir de recursos y el ministerio colaborativo, somos testigos del
-                    amor de Dios unificando a su pueblo en la misión de hacer su palabra accesible para todos. 
-                </p>
-            </div>
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <!-- Etiqueta Superior -->
+            <span class="text-xs font-bold tracking-widest text-[#B35438] uppercase block mb-3">
+                Fundamento Bíblico
+            </span>
+            
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+                Siguiendo el Ejemplo de la Iglesia Primitiva
+            </h2>
+            
+            <div class="bg-[#B35438] w-20 h-1 mx-auto mb-6 rounded-full"></div>
+            
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                Así como la iglesia primitiva fue movida por la gracia de Dios para apoyarse y fortalecerse mutuamente a través de fronteras culturales y geográficas, la iglesia global de hoy continúa este patrón divino. A través del ánimo mutuo, el compartir de recursos y el ministerio colaborativo, somos testigos del amor de Dios unificando a su pueblo en la misión de hacer su palabra accesible para todos.
+            </p>
         </div>
-        <div class="flex gap-8 md:flex-row flex-col mt-8">
-            <div class="bg-white rounded-2xl space-y-4 w-full md:w-[50%] p-6 border-1 border-blue-200">
-                <div class="justify-center">
-                    <p class="px-4 text-blue-800 text-md font-medium">
-                        "Ahora, hermanos, queremos que se enteren de la gracia que Dios ha dado a las iglesias de Macedonia.
-                        En medio de las pruebas más difíciles, su desbordante alegría y su extrema pobreza abundaron en rica generosidad."
+
+        <!-- Tarjetas de Citas Bíblicas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            
+            <!-- Tarjeta 1: 2 Corintios -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between relative overflow-hidden">
+                <!-- Borde lateral izquierdo azul -->
+                <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-blue-700"></div>
+                
+                <div>
+                    <!-- Icono de comillas simulado -->
+                    <span class="text-blue-100 font-serif text-6xl leading-none select-none block -mb-4">“</span>
+                    <p class="text-gray-700 text-base italic font-medium relative z-10 mb-6">
+                        "Ahora, hermanos, queremos que se enteren de la gracia que Dios ha dado a las iglesias de Macedonia. En medio de las pruebas más difíciles, su desbordante alegría y su extrema pobreza abundaron en rica generosidad."
                     </p>
                 </div>
-                <div class="flex justify-end p-2">
-                    <span class="text-blue-800 font-bold text-sm">- 2 corintios 8:1-2</span>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+                    <span class="text-blue-900 font-bold text-sm">2 Corintios 8:1-2</span>
+                    <span class="text-[10px] font-bold tracking-wider text-[#B35438] bg-orange-50 px-3 py-1 rounded-full uppercase">
+                        Generosidad Mutua
+                    </span>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl space-y-4 w-full md:w-[50%] p-6 border-1 border-blue-200">
-                <div class="max-w-4xl">
-                    <p class="px-4 text-blue-800 text-md font-medium">
-                        "Así que los creyentes de Antioquía decidieron enviar una ayuda a los hermanos de Judea, y cada uno
-                        dio lo que podía. Así lo hicieron, y confiaron sus ofrendas a Bernabé y a Saulo para que las llevaran
-                        a los ancianos de la iglesia de Jerusalén."
+            <!-- Tarjeta 2: Hechos -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between relative overflow-hidden">
+                <!-- Borde lateral izquierdo terracota -->
+                <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#B35438]"></div>
+                
+                <div>
+                    <!-- Icono de comillas simulado -->
+                    <span class="text-orange-100 font-serif text-6xl leading-none select-none block -mb-4">“</span>
+                    <p class="text-gray-700 text-base italic font-medium relative z-10 mb-6">
+                        "Así que los creyentes de Antioquía decidieron enviar una ayuda a los hermanos de Judea, y cada uno dio lo que podía. Así lo hicieron, y confiaron sus ofrendas a Bernabé y a Saulo para que las llevaran a los ancianos de la iglesia de Jerusalén."
                     </p>
                 </div>
-                <div class="flex justify-end p-2">
-                    <span class="text-blue-800 font-bold text-sm">- Hechos 11:29</span>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+                    <span class="text-blue-900 font-bold text-sm">Hechos 11:29</span>
+                    <span class="text-[10px] font-bold tracking-wider text-[#B35438] bg-orange-50 px-3 py-1 rounded-full uppercase">
+                        Solidaridad en el Cuerpo
+                    </span>
                 </div>
             </div>
+
         </div>    
     </Container>
 </section>

@@ -3,6 +3,7 @@ import Historia from "./Tarjetas/TarjetaHistorias.astro";
 import Armando from "../assets/Armando3.jpeg";
 import Omar from "../assets/Omar1.png";
 import Ester from "../assets/Ester3.png";
+import { Image } from "astro:assets";
 import { ArrowRight, MessageSquareQuote } from "@lucide/astro";
 ---
 
@@ -40,38 +41,107 @@ import { ArrowRight, MessageSquareQuote } from "@lucide/astro";
       </div>
     </div>
 
-    <!-- Cuadrícula de Historias -->
+    <!-- Cuadrícula de Historias con la estructura de la imagen -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
       
       <!-- Historia 1 -->
-      <Historia
-        nombre="Armando"
-        rol="Traductor Indígena"
-        descripcion="Para Armando, la traducción puede ser muy desafiante; algunas veces se encuentra con palabras o frases difíciles de verter a su propia lengua. Los recursos puente le han permitido superar obstáculos culturales."
-        pais="AMAZONÍA"
-        imagen={Armando}
-        link="/Historias#Armando"
-      />
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group">
+        <div>
+          <!-- Contenedor de la Imagen con Etiqueta Flotante -->
+          <div class="relative h-48 w-full overflow-hidden">
+            <Image src={Armando} alt="Armando" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#B35438] text-white text-[10px] font-bold tracking-wider px-3 py-1 rounded-full uppercase shadow-sm">
+                AMAZONÍA
+              </span>
+            </div>
+          </div>
+          
+          <!-- Contenido de Texto -->
+          <div class="p-6">
+            <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+              "Para Armando, la traducción puede ser muy desafiante; algunas veces se encuentra con palabras o frases difíciles de verter a su propia lengua. Los recursos puente le han permitido superar obstáculos culturales."
+            </p>
+          </div>
+        </div>
+
+        <!-- Pie de Tarjeta: Nombre, Rol y Botón de Flecha -->
+        <div class="px-6 pb-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+          <div>
+            <h3 class="font-bold text-blue-950 text-base">Armando</h3>
+            <p class="text-xs text-gray-500">Traductor Indígena</p>
+          </div>
+          <a href="/Historias#Armando" class="w-9 h-9 rounded-full bg-orange-50 hover:bg-orange-100 text-[#B35438] flex items-center justify-center transition-colors">
+            <ArrowRight size="16" />
+          </a>
+        </div>
+      </div>
 
       <!-- Historia 2 -->
-      <Historia
-        nombre="Omar"
-        rol="Traductor Comunitario"
-        descripcion="Omar cuenta que las herramientas de traducción le han aclarado sus dudas y lo han ayudado a comprender las palabras o frases del texto bíblico original con total fidelidad en el contexto de su pueblo."
-        pais="AMAZONÍA"
-        imagen={Omar}
-        link="/Historias#Omar"
-      />
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group">
+        <div>
+          <!-- Contenedor de la Imagen con Etiqueta Flotante -->
+          <div class="relative h-48 w-full overflow-hidden">
+            <Image src={Omar} alt="Omar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#B35438] text-white text-[10px] font-bold tracking-wider px-3 py-1 rounded-full uppercase shadow-sm">
+                AMAZONÍA
+              </span>
+            </div>
+          </div>
+          
+          <!-- Contenido de Texto -->
+          <div class="p-6">
+            <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+              "Omar cuenta que las herramientas de traducción le han aclarado sus dudas y lo han ayudado a comprender las palabras o frases del texto bíblico original con total fidelidad en el contexto de su pueblo."
+            </p>
+          </div>
+        </div>
+
+        <!-- Pie de Tarjeta: Nombre, Rol y Botón de Flecha -->
+        <div class="px-6 pb-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+          <div>
+            <h3 class="font-bold text-blue-950 text-base">Omar</h3>
+            <p class="text-xs text-gray-500">Traductor Comunitario</p>
+          </div>
+          <a href="/Historias#Omar" class="w-9 h-9 rounded-full bg-orange-50 hover:bg-orange-100 text-[#B35438] flex items-center justify-center transition-colors">
+            <ArrowRight size="16" />
+          </a>
+        </div>
+      </div>
 
       <!-- Historia 3 -->
-      <Historia
-        nombre="Ester"
-        rol="Mentora Lingüística"
-        descripcion="Ester coincide con Omar en que las herramientas de ayuda exegética permiten despejar dudas profundas, habiendo sido testigo del admirable crecimiento técnico y espiritual de los traductores."
-        pais="SUDAMÉRICA"
-        imagen={Ester}
-        link="/Historias#Ester"
-      />
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group">
+        <div>
+          <!-- Contenedor de la Imagen con Etiqueta Flotante -->
+          <div class="relative h-48 w-full overflow-hidden">
+            <Image src={Ester} alt="Ester" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#B35438] text-white text-[10px] font-bold tracking-wider px-3 py-1 rounded-full uppercase shadow-sm">
+                SUDAMÉRICA
+              </span>
+            </div>
+          </div>
+          
+          <!-- Contenido de Texto -->
+          <div class="p-6">
+            <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+              "Ester coincide con Omar en que las herramientas de ayuda exegética permiten despejar dudas profundas, habiendo sido testigo del admirable crecimiento técnico y espiritual de los traductores."
+            </p>
+          </div>
+        </div>
+
+        <!-- Pie de Tarjeta: Nombre, Rol y Botón de Flecha -->
+        <div class="px-6 pb-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+          <div>
+            <h3 class="font-bold text-blue-950 text-base">Ester</h3>
+            <p class="text-xs text-gray-500">Mentora Lingüística</p>
+          </div>
+          <a href="/Historias#Ester" class="w-9 h-9 rounded-full bg-orange-50 hover:bg-orange-100 text-[#B35438] flex items-center justify-center transition-colors">
+            <ArrowRight size="16" />
+          </a>
+        </div>
+      </div>
 
     </div>
 

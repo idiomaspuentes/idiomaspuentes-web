@@ -1,6 +1,6 @@
 ---
 import Area from "./Tarjetas/TarjetaAreas.astro";
-import { Globe, Users, Compass, MapPin } from "@lucide/astro";
+import { Globe, Users, Compass, MapPin, ArrowRight } from "@lucide/astro";
 ---
 
 <section class="relative bg-[#F7F5F0] py-20 px-4 sm:px-6 lg:px-8">
@@ -22,7 +22,7 @@ import { Globe, Users, Compass, MapPin } from "@lucide/astro";
     </p>
 
     <!-- Cuadrícula de Tarjetas de Estadísticas -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
       
       <!-- Tarjeta 1: Hispanoamérica -->
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
@@ -116,6 +116,17 @@ import { Globe, Users, Compass, MapPin } from "@lucide/astro";
         </div>
       </div>
 
+    </div>
+
+    <!-- Botón Inferior "Ver Todos los Proyectos" -->
+    <div class="flex items-center justify-center">
+      <a
+        href="/Proyectos"
+        class="inline-flex bg-blue-900 hover:bg-blue-950 items-center justify-center text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-md"
+      >
+        Ver Todos los Proyectos
+        <ArrowRight class="ml-2 w-5 h-5" />
+      </a>
     </div>
 
   </div>

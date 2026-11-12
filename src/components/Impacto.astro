@@ -1,70 +1,93 @@
 ---
 import Impactos from "./Tarjetas/TarjetaImpacto.astro";
+import { Heart } from "@lucide/astro";
 ---
 
-<section class="relative bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-  <div class="container mx-auto text-center">
-    <h2 class="text-4xl font-serif font-bold text-gray-800">Nuestro Impacto</h2>
-    <div class="bg-secondary w-24 h-1.5 mx-auto mt-4 mb-12 rounded-full"></div>
-    <p class="text-lg mx-auto mb-16 text-gray-700">
-      Alcance del trabajo que Dios ha puesto en nuestras manos.
-    </p>
+<section class="relative bg-[#FCFBF9] py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Contenedor Principal Oscuro (Estilo Tarjeta Grande) -->
+    <div class="bg-[#0A1628] rounded-3xl p-8 sm:p-12 lg:p-16 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center text-white">
+      
+      <!-- Columna Izquierda: Textos y Botón -->
+      <div class="lg:col-span-5 flex flex-col items-start text-left">
+        <!-- Etiqueta Superior -->
+        <span class="text-xs font-bold tracking-widest text-[#D97757] uppercase mb-4 block">
+          NUESTRO IMPACTO GLOBAL
+        </span>
 
-    <div
-      class="justify-center gap-8 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-    >
-      <Impactos
-        numero="11"
-        titulo="proyectos en progreso"
-        descripcion="Desarrollamos tres proyectos al idioma puente español, uno al portugués y siete de Otras Lenguas indígenas."
-      />
+        <!-- Título Principal -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-6 text-white">
+          Alcance del trabajo que Dios ha puesto en nuestras manos
+        </h2>
 
-      <Impactos
-        numero="10"
-        titulo="comunidades capacitadas"
-        descripcion="Diez comunidades indígenas han participado en la capacitación inicial sobre el uso de herramientas de traducción."
-      />
+        <!-- Descripción -->
+        <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8">
+          Colaboramos con iglesias locales en más de 45 países, proveyendo herramientas para que las comunidades sean las protagonistas de su propia traducción bíblica.
+        </p>
 
-      <Impactos
-        numero="3"
-        titulo="países con acceso"
-        descripcion="Ya se ha logrado entrada a tres países de Latinoamérica."
-      />
-
-      <Impactos
-        numero="5"
-        titulo="comunidades beneficiadas"
-        descripcion="Trabajando en más de 45 países, colaborando con iglesias locales y comunidades."
-      />
-    </div>
-
-    <div
-      class="bg-blue-50/50 max-w-170 rounded-2xl shadow-lg p-4 justify-self-center items-center mt-16 px-6"
-    >
-      <h1 class="font-bold text-2xl mt-4">
-        ¿Quieres ser parte de este impacto?
-      </h1>
-      <h2 class="text-md text-gray-700 mt-4">
-        Cada donación, oración y persona que se une a nuestro equipo, contribuye
-        a que más personas tengan acceso a la Palabra de Dios en su idioma.
-      </h2>
-      <div class="flex justify-center gap-4 py-3">
-        <div class="mt-8 text-center">
-          <a
-            class="donateBtn cursor-pointer inline-flex bg-blue-900 hover:bg-blue-950 items-center justify-center text-white font-semibold py-3 px-6 rounded-md transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
-          >
-            Donar ahora
-          </a>
-        </div>
-        <div class="mt-8 text-center">
+        <!-- Botón de Acción -->
+        <div>
           <a
             href="/Involucrate"
-            class="inline-flex bg-white hover:bg-gray-100 text-blue-900 border-1 border-blue-900 items-center justify-center font-semibold py-3 px-6 rounded-md transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
+            class="donateBtn inline-flex items-center justify-center bg-[#B35438] hover:bg-[#96432b] text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-md"
           >
-            Únete como Voluntario
+            <Heart class="mr-2 fill-current" size="18" />
+            Sé parte de este impacto
           </a>
         </div>
       </div>
+
+      <!-- Columna Derecha: Cuadrícula de 4 Tarjetas de Impacto -->
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Tarjeta 1 -->
+        <div class="bg-[#13233D] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#D97757] block mb-2">11</span>
+            <h3 class="text-base font-bold text-white mb-2">Proyectos en progreso</h3>
+            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+              3 al idioma puente español, 1 al portugués y 7 en lenguas indígenas vivas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="bg-[#13233D] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#D97757] block mb-2">10</span>
+            <h3 class="text-base font-bold text-white mb-2">Comunidades capacitadas</h3>
+            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+              Han culminado con éxito la capacitación inicial en software y recursos exegéticos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="bg-[#13233D] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#D97757] block mb-2">3</span>
+            <h3 class="text-base font-bold text-white mb-2">Países con acceso</h3>
+            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+              Entrada formal activa en comunidades de 3 naciones latinoamericanas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="bg-[#13233D] border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#D97757] block mb-2">5</span>
+            <h3 class="text-base font-bold text-white mb-2">Comunidades beneficiadas</h3>
+            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+              Recibiendo porciones traducidas y materiales de discipulado directo.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 </section>

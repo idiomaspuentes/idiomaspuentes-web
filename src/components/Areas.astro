@@ -1,84 +1,122 @@
 ---
 import Area from "./Tarjetas/TarjetaAreas.astro";
-import Mapa from "../assets/Mapa_Id-2.svg";
-import { Image } from "astro:assets";
+import { Globe, Users, Compass, MapPin } from "@lucide/astro";
 ---
 
-<section class="relative bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-  <div class="container mx-auto">
-    <h2 class="text-4xl font-serif font-bold text-gray-800 mt-8 text-center">
+<section class="relative bg-[#F7F5F0] py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    
+    <!-- Etiqueta Superior -->
+    <div class="inline-flex items-center gap-2 text-[#B35438] text-xs font-bold tracking-widest uppercase mb-3">
+      CONTEXTO DEMOGRÁFICO
+    </div>
+
+    <!-- Título Principal -->
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-blue-950 mt-2 mb-4">
       Áreas de Necesidad
     </h2>
-    <div class="bg-secondary w-24 h-1.5 mx-auto mt-4 mb-12 rounded-full"></div>
-    <p class="text-lg mx-auto mb-16 text-gray-800 max-w-3xl text-center">
-      Estas son las regiones de Latinoamérica y el mundo donde trabajamos para
-      llevar la Palabra de Dios a idiomas aún sin traducción bíblica.
+
+    <!-- Subtítulo / Descripción -->
+    <p class="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto mb-16 leading-relaxed">
+      Estas son las regiones de Latinoamérica y el mundo donde trabajamos para llevar la Palabra de Dios a idiomas aún sin traducción bíblica, aprovechando los puentes idiomáticos existentes.
     </p>
-    <div
-      class="bg-white rounded-2xl mt-20 justify-self-center items-center px-10 py-10 shadow-lg max-w-6xl mx-auto"
-    >
-      <div class="bg-gradient-to-b from-gray-300 to-blue-100 rounded-2xl">
-        <Image
-          src={Mapa}
-          alt="Mapa Idiomas Puentes"
-          class="w-full h-auto object-cover"
-        />
+
+    <!-- Cuadrícula de Tarjetas de Estadísticas -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      
+      <!-- Tarjeta 1: Hispanoamérica -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] uppercase">
+              HISPANOAMÉRICA
+            </span>
+            <div class="text-blue-900">
+              <Globe size="20" />
+            </div>
+          </div>
+          <h3 class="text-3xl lg:text-4xl font-extrabold text-blue-950 mb-3">
+            92,5%
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            de la población indígena en países hispanohablantes <strong class="text-gray-800 font-semibold">hablan español.</strong>
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 text-[11px] text-gray-400">
+          Fuente: <a href="https://cvc.cervantes.es/lengua/anuario/anuario_24/el_espanol_en_el_mundo_anuario_instituto_cervantes_2024.pdf" target="_blank" class="text-blue-800 hover:underline">Anuario Instituto Cervantes, 2024</a>
+        </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
-        <Area numero="92,5%"
-          >de la población indígena en países hispanohablantes <span
-            class="text-gray-700 font-semibold">hablan español.</span
-          >
-          fuente: <a
-            href="https://cvc.cervantes.es/lengua/anuario/anuario_24/el_espanol_en_el_mundo_anuario_instituto_cervantes_2024.pdf"
-            class="text-blue-800">Anuario Instituto Cervantes</a
-          >, 2024.</Area
-        >
-        <Area numero="60%"
-          >de la población indígena <span class="text-gray-700 font-semibold"
-            >hablan español y su idioma nativo.</span
-          >
-          (Fuente: Sistema de Indicadores Sociodemográficos de Poblaciones y Pueblos
-          Indígenas [<a
-            href="https://redatam.org/redatam/pryesp/sisppi/Docs/Informacion_SISPPI.pdf"
-            class="text-blue-800">SISPPI</a
-          >], CELADE)."</Area
-        >
-        <Area numero="76,9%"
-          >de la población indígena de Brasil, mayores de cinco años, <span
-            class="text-gray-700 font-semibold">hablan portugués.</span
-          > Fuente: (<a href="" class="text-blue-800">IWGIA</a>, Grupo
-          Internacional de Trabajo sobre Asuntos Indígenas)."</Area
-        >
-        <Area numero="119"
-          ><span class="text-gray-700 font-semibold"
-            >lenguas indígenas vivas</span
-          > en la <span class="text-gray-700 font-semibold"
-            >Comunidad de países Africanos de lengua oficial portuguesa.</span
-          > (PALOP). (Fuente: Ethnologue)."</Area
-        >
+
+      <!-- Tarjeta 2: Bilingüismo -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] uppercase">
+              BILINGÜISMO
+            </span>
+            <div class="text-[#B35438]">
+              <Users size="20" />
+            </div>
+          </div>
+          <h3 class="text-3xl lg:text-4xl font-extrabold text-[#B35438] mb-3">
+            60%
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            de la población indígena <strong class="text-gray-800 font-semibold">hablan español y su idioma nativo de manera fluida.</strong>
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 text-[11px] text-gray-400">
+          Fuente: <a href="https://redatam.org/redatam/pryesp/sisppi/Docs/Informacion_SISPPI.pdf" target="_blank" class="text-blue-800 hover:underline">SISPPI, CELADE</a>
+        </div>
       </div>
+
+      <!-- Tarjeta 3: Brasil -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] uppercase">
+              BRASIL
+            </span>
+            <div class="text-[#B35438]">
+              <MapPin size="20" />
+            </div>
+          </div>
+          <h3 class="text-3xl lg:text-4xl font-extrabold text-blue-950 mb-3">
+            76,9%
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            de la población indígena de Brasil mayores de 5 años <strong class="text-gray-800 font-semibold">hablan portugués.</strong>
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 text-[11px] text-gray-400">
+          Fuente: <span class="text-blue-800">IWGIA</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4: Palop & África -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] uppercase">
+              PALOP & ÁFRICA
+            </span>
+            <div class="text-[#B35438]">
+              <Compass size="20" />
+            </div>
+          </div>
+          <h3 class="text-3xl lg:text-4xl font-extrabold text-blue-950 mb-3">
+            119
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            <strong class="text-gray-800 font-semibold">lenguas indígenas vivas</strong> en la Comunidad de países de lengua oficial portuguesa (PALOP).
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 text-[11px] text-gray-400">
+          Fuente: Ethnologue
+        </div>
+      </div>
+
     </div>
-    <div class="mt-12 text-center">
-      <a
-        href="/Proyectos"
-        class="inline-flex bg-blue-800 hover:bg-blue-900 items-center justify-center text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
-      >
-        Ver Todos los Proyectos
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 ml-2 mt-1"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-      </a>
-    </div>
+
   </div>
 </section>

@@ -9,7 +9,7 @@ import { ArrowUpRight, FolderKanban } from "@lucide/astro";
 <section class="relative bg-[#FCFBF9] py-20 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto">
     
-    <!-- Encabezado de la Sección (Alineado a la izquierda con botón a la derecha) -->
+    <!-- Encabezado de la Sección -->
     <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
       <div class="max-w-3xl">
         <!-- Etiqueta Superior -->
@@ -44,39 +44,111 @@ import { ArrowUpRight, FolderKanban } from "@lucide/astro";
     <!-- Grid de Proyectos -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
       
-      <!-- Proyecto 1 -->
-      <Proyecto
-        categoria="PAQUETES EXEGÉTICOS"
-        titulo="Traducción al idioma puente español"
-        progreso="PROGRESO ACTUAL"
-        porcentaje="6%"
-        tipoProgreso="barra"
-        descripcion="Una iniciativa que traduce paquetes de recursos de traducción para cada libro de la Biblia, destinada a abrir nuevas puertas al acceso de la Palabra de Dios para más de 55 millones de personas indígenas en Latinoamérica."
-        metaTitulo="META"
-        metaValor="66 Libros Canónicos"
-        alcanceTitulo="ALCANCE"
-        alcanceValor="Toda Hispanoamérica"
-        conoce="Conoce más sobre este proyecto"
-        href="/Proyectos"
-        imagen={Grupal1}
-      />
+      <!-- Proyecto 1: Traducción al idioma puente español -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between relative">
+        <div>
+          <!-- Categoría y Porcentaje -->
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] bg-orange-50 px-3 py-1 rounded-full uppercase">
+              PAQUETES EXEGÉTICOS
+            </span>
+            <div class="text-right">
+              <span class="text-2xl font-extrabold text-[#B35438]">6%</span>
+              <span class="block text-[9px] font-bold tracking-wider text-gray-400 uppercase">PROGRESO ACTUAL</span>
+            </div>
+          </div>
 
-      <!-- Proyecto 2 -->
-      <Proyecto
-        categoria="DISCIPULADO INICIAL"
-        titulo="Historias Bíblicas Abiertas en español"
-        progreso="COMPLETADO"
-        porcentaje="100%"
-        tipoProgreso="completado"
-        descripcion="Este recurso reúne 50 relatos claves de la Biblia, desde la creación hasta el Apocalipsis, y ya está en manos de dos comunidades indígenas de Latinoamérica como herramienta para la evangelización y el discipulado integral."
-        metaTitulo="ESTADO"
-        metaValor="Distribuido en Campo"
-        alcanceTitulo="FORMATO"
-        alcanceValor="Audio · Texto Impreso"
-        conoce="Conoce más sobre este proyecto"
-        href="/Proyectos#historias-biblicas-abiertas"
-        imagen={Grupal0}
-      />
+          <!-- Título -->
+          <h3 class="text-xl sm:text-2xl font-bold text-blue-950 mb-4">
+            Traducción al idioma puente español
+          </h3>
+
+          <!-- Barra de Progreso -->
+          <div class="w-full bg-gray-100 h-2 rounded-full mb-6 overflow-hidden">
+            <div class="bg-[#B35438] h-full rounded-full" style="width: 6%;"></div>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Una iniciativa que traduce paquetes de recursos de traducción para cada libro de la Biblia, destinada a abrir nuevas puertas al acceso de la Palabra de Dios para más de <strong class="text-gray-900">55 millones de personas indígenas</strong> en Latinoamérica.
+          </p>
+
+          <!-- Metadatos (Cajas inferiores internas) -->
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-[#FAF7F2] p-3 rounded-xl border border-gray-100">
+              <span class="block text-[10px] font-bold tracking-wider text-gray-400 uppercase mb-0.5">META</span>
+              <span class="text-xs font-bold text-blue-950">66 Libros Canónicos</span>
+            </div>
+            <div class="bg-[#FAF7F2] p-3 rounded-xl border border-gray-100">
+              <span class="block text-[10px] font-bold tracking-wider text-gray-400 uppercase mb-0.5">ALCANCE</span>
+              <span class="text-xs font-bold text-blue-950">Toda Hispanoamérica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enlace inferior -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+          <a href="/Proyectos" class="text-xs font-semibold text-blue-950 hover:text-[#B35438] transition-colors inline-flex items-center gap-1">
+            Conoce más sobre este proyecto <span>&gt;</span>
+          </a>
+          <span class="text-gray-400">
+            <ArrowUpRight size="16" />
+          </span>
+        </div>
+      </div>
+
+      <!-- Proyecto 2: Historias Bíblicas Abiertas en español -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between relative">
+        <div>
+          <!-- Categoría y Completado -->
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] bg-orange-50 px-3 py-1 rounded-full uppercase">
+              DISCIPULADO INICIAL
+            </span>
+            <div class="text-right">
+              <span class="text-2xl font-extrabold text-blue-800">100%</span>
+              <span class="block text-[9px] font-bold tracking-wider text-gray-400 uppercase">COMPLETADO</span>
+            </div>
+          </div>
+
+          <!-- Título -->
+          <h3 class="text-xl sm:text-2xl font-bold text-blue-950 mb-4">
+            Historias Bíblicas Abiertas en español
+          </h3>
+
+          <!-- Barra de Progreso Completa -->
+          <div class="w-full bg-gray-100 h-2 rounded-full mb-6 overflow-hidden">
+            <div class="bg-blue-800 h-full rounded-full" style="width: 100%;"></div>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Este recurso reúne 50 relatos claves de la Biblia, desde la creación hasta el Apocalipsis, y ya está en manos de <strong class="text-gray-900">dos comunidades indígenas</strong> de Latinoamérica como herramienta para la evangelización y el discipulado integral.
+          </p>
+
+          <!-- Metadatos (Cajas inferiores internas) -->
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-[#FAF7F2] p-3 rounded-xl border border-gray-100">
+              <span class="block text-[10px] font-bold tracking-wider text-gray-400 uppercase mb-0.5">ESTADO</span>
+              <span class="text-xs font-bold text-emerald-700">Distribuido en Campo</span>
+            </div>
+            <div class="bg-[#FAF7F2] p-3 rounded-xl border border-gray-100">
+              <span class="block text-[10px] font-bold tracking-wider text-gray-400 uppercase mb-0.5">FORMATO</span>
+              <span class="text-xs font-bold text-blue-950">Audio · Texto Impreso</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enlace inferior -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+          <a href="/Proyectos#historias-biblicas-abiertas" class="text-xs font-semibold text-blue-950 hover:text-[#B35438] transition-colors inline-flex items-center gap-1">
+            Conoce más sobre este proyecto <span>&gt;</span>
+          </a>
+          <span class="text-emerald-600">
+            ✓
+          </span>
+        </div>
+      </div>
 
     </div>
 

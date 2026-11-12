@@ -1,106 +1,104 @@
 ---
-import Misiones from "./Tarjetas/TarjetaMision.astro";
+import { ArrowRight, BookOpen, Users, Compass, Flag } from "@lucide/astro";
 ---
 
-<section class="relative bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-  <div class="container mx-auto text-center">
-    <h2 class="text-4xl font-serif font-bold text-gray-800 mt-8">
-      Nuestra Misión
-    </h2>
-    <div
-      style="background:#2bbbad"
-      class="bg-secondary w-24 h-1.5 mx-auto mt-4 mb-12 rounded-full"
-    >
+<section class="relative bg-[#FCFBF9] py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Encabezado de la Sección (Alineado a la izquierda con enlace a la derecha) -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+      <div class="max-w-3xl">
+        <!-- Etiqueta Superior -->
+        <div class="inline-flex items-center gap-2 text-[#B35438] text-xs font-bold tracking-widest uppercase mb-3">
+          <Flag size="14" />
+          NUESTRA MISIÓN
+        </div>
+
+        <!-- Título Principal -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-blue-950 leading-tight mb-4">
+          Equipamos a pueblos indígenas bilingües para que ellos mismos traduzcan la Palabra de Dios.
+        </h2>
+
+        <!-- Subtítulo -->
+        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+          Desde el español o el portugués hacia sus lenguas maternas, fortaleciendo el liderazgo local con autonomía y rigor bíblico.
+        </p>
+      </div>
     </div>
-    <p class="text-lg mx-auto mb-16 text-gray-800 max-w-3xl">
-      Equipamos a pueblos indígenas bilingües para que ellos mismos traduzcan la
-      Palabra de Dios desde el español o el portugués hacia sus lenguas
-      maternas.
-    </p>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-10 max-w-6xl mx-auto"
-    >
-      <Misiones
-        titulo="Facilitamos y proveemos recursos"
-        parrafo="Producimos recursos y herramientas para capacitar y guiar a los traductores de Otras Lenguas, a traducir, completar y comprobar la traducción de las Escrituras en el idioma de su corazón."
-        color="bg-gradient-to-r from-cyan-700/80 to-cyan-800/90"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-24 w-24 text-white relative z-10"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-          ></path>
-        </svg>
-      </Misiones>
-      <Misiones
-        titulo="Ofrecemos asesoría y entrenamiento"
-        parrafo="Brindamos capacitación  a traductores de Otras Lenguas, sobre el proceso de traducción y el uso de las herramientas para que puedan realizar un trabajo de calidad y con excelencia."
-        color="bg-gradient-to-r from-secondary to-teal-600"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-24 w-24 text-white relative z-10"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          ></path>
-        </svg></Misiones
-      >
-      <Misiones
-        titulo="Acompañamos a las iglesias nativas"
-        parrafo="Proveemos apoyo y soporte continuo a las iglesias nativas para que puedan realizar el trabajo de traducción de manera constante y sin largos retrasos."
-        color="bg-gradient-to-r from-emerald-500 to-emerald-600"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-24 w-24 text-white relative z-10"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-          ></path>
-        </svg></Misiones
-      >
+
+    <!-- Grid de Tarjetas / Pilares -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Pilar 01 -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between relative hover:shadow-md transition-shadow">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] bg-orange-50 px-3 py-1 rounded-full uppercase">
+              PILAR 01
+            </span>
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center">
+              <BookOpen size="20" />
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-3">
+            Facilitamos y proveemos recursos
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Producimos recursos y herramientas para capacitar y guiar a los traductores de Otras Lenguas, a traducir, completar y comprobar la traducción de las Escrituras en el idioma de su corazón.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100">
+          <span class="text-xs font-semibold text-gray-500">Guías exegéticas y léxicos</span>
+        </div>
+      </div>
+
+      <!-- Pilar 02 -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between relative hover:shadow-md transition-shadow">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] bg-orange-50 px-3 py-1 rounded-full uppercase">
+              PILAR 02
+            </span>
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center">
+              <Users size="20" />
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-3">
+            Ofrecemos asesoría y entrenamiento
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Brindamos capacitación a traductores de Otras Lenguas, sobre el proceso de traducción y el uso de las herramientas para que puedan realizar un trabajo de calidad y con excelencia.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100">
+          <span class="text-xs font-semibold text-gray-500">Talleres técnicos presenciales</span>
+        </div>
+      </div>
+
+      <!-- Pilar 03 -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between relative hover:shadow-md transition-shadow">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-[10px] font-bold tracking-widest text-[#B35438] bg-orange-50 px-3 py-1 rounded-full uppercase">
+              PILAR 03
+            </span>
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center">
+              <Compass size="20" />
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-3">
+            Acompañamos a las iglesias nativas
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Proveemos apoyo y soporte continuo a las iglesias nativas para que puedan realizar el trabajo de traducción de manera constante y sin largos retrasos.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-100">
+          <span class="text-xs font-semibold text-gray-500">Soporte pastoral y comunitario</span>
+        </div>
+      </div>
+
     </div>
-    <div class="flex items-center justify-center mt-20">
-      <a
-        href="/Nosotros"
-        class="inline-flex bg-blue-800 hover:bg-blue-900 items-center justify-center text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
-      >
-        Conoce más
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 ml-2"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-      </a>
-    </div>
+
   </div>
 </section>

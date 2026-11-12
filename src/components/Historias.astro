@@ -3,66 +3,102 @@ import Historia from "./Tarjetas/TarjetaHistorias.astro";
 import Armando from "../assets/Armando3.jpeg";
 import Omar from "../assets/Omar1.png";
 import Ester from "../assets/Ester3.png";
+import { ArrowRight, MessageSquareQuote } from "@lucide/astro";
 ---
 
-<section class="relative bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-  <div class="container mx-auto text-center">
-    <h2 class="text-3xl font-serif font-bold text-gray-800">
-      Historias de Impacto
-    </h2>
-    <div class="bg-secondary w-24 h-1.5 mx-auto mt-4 mb-12 rounded-full"></div>
-    <p class="text-lg text-gray-700 mx-auto mb-16 leading-relaxed">
-      Descubre cómo la Palabra de Dios está transformando vidas y comunidades
-      alrededor del mundo.
-    </p>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-10 max-w-6xl mx-auto"
-    >
+<section class="relative bg-[#FCFBF9] py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Encabezado de la Sección -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+      <div class="max-w-3xl">
+        <!-- Etiqueta Superior -->
+        <div class="inline-flex items-center gap-2 text-[#B35438] text-xs font-bold tracking-widest uppercase mb-3">
+          TESTIMONIOS DE CAMPO
+        </div>
+
+        <!-- Título Principal -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-blue-950 mb-4">
+          Historias de Impacto
+        </h2>
+
+        <!-- Subtítulo / Descripción -->
+        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+          Descubre cómo la Palabra de Dios está transformando vidas y comunidades a medida que se clarifica en sus lenguas nativas.
+        </p>
+      </div>
+
+      <!-- Enlace superior derecho -->
+      <div class="flex-shrink-0">
+        <a 
+          href="/Historias" 
+          class="inline-flex items-center text-sm font-semibold text-blue-900 hover:text-[#B35438] transition-colors duration-200 group"
+        >
+          Ver todos los testimonios 
+          <ArrowRight class="ml-1.5 w-4 h-4 transition-transform group-hover:translate-x-1" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Cuadrícula de Historias -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
+      
+      <!-- Historia 1 -->
       <Historia
         nombre="Armando"
-        descripcion="Para Armando, un traductor indígena, la traducción puede ser desafiante, algunas veces se encuentra con palabras o frases que son muy difíciles de traducir a su propia lengua."
-        pais="Amazonía"
+        rol="Traductor Indígena"
+        descripcion="Para Armando, la traducción puede ser muy desafiante; algunas veces se encuentra con palabras o frases difíciles de verter a su propia lengua. Los recursos puente le han permitido superar obstáculos culturales."
+        pais="AMAZONÍA"
         imagen={Armando}
-        boton="Leer Historia Completa"
         link="/Historias#Armando"
       />
 
+      <!-- Historia 2 -->
       <Historia
         nombre="Omar"
-        descripcion="Por su parte, Omar, traductor de otra comunidad indígena, cuenta que las herramientas de traducción le han aclarado sus dudas y lo han ayudado a entender las palabras o frases del texto original y su contexto."
-        pais="Amazonía"
+        rol="Traductor Comunitario"
+        descripcion="Omar cuenta que las herramientas de traducción le han aclarado sus dudas y lo han ayudado a comprender las palabras o frases del texto bíblico original con total fidelidad en el contexto de su pueblo."
+        pais="AMAZONÍA"
         imagen={Omar}
-        boton="Leer Historia Completa"
         link="/Historias#Omar"
       />
 
+      <!-- Historia 3 -->
       <Historia
         nombre="Ester"
-        descripcion="Ester coincide con Omar, en que las herramientas les permiten aclarar muchas dudas a los traductores, y ha sido testigo de cómo él está creciendo como traductor."
-        pais="Sudamérica"
+        rol="Mentora Lingüística"
+        descripcion="Ester coincide con Omar en que las herramientas de ayuda exegética permiten despejar dudas profundas, habiendo sido testigo del admirable crecimiento técnico y espiritual de los traductores."
+        pais="SUDAMÉRICA"
         imagen={Ester}
-        boton="Leer Historia Completa"
         link="/Historias#Ester"
       />
+
     </div>
 
-    <div
-      class="bg-blue-50/50 shadow-sm max-w-160 rounded-xl mt-15 justify-self-center items-center px-4 py-8"
-    >
-      <h1 class="font-bold text-2xl">Comparte tu historia</h1>
-      <h2 class="mt-4 text-gray-700">
-        ¿La traducción bíblica o nuestro ministerio ha impactado tu comunidad?
-        Nos encantaría escuchar y compartir tu historia de transformación.
-      </h2>
-
-      <div class="mt-6 text-center animate-fade-in">
+    <!-- Banner Inferior: Comparte tu historia -->
+    <div class="bg-orange-50/60 border border-orange-100 rounded-2xl p-8 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-orange-100 text-[#B35438] flex items-center justify-center flex-shrink-0 mt-1">
+          <MessageSquareQuote size="24" />
+        </div>
+        <div>
+          <h3 class="font-serif font-bold text-xl text-blue-950 mb-1">
+            Comparte tu historia
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed max-w-2xl">
+            ¿La traducción bíblica o nuestro ministerio ha impactado tu comunidad? Nos encantaría escuchar y compartir tu historia de transformación.
+          </p>
+        </div>
+      </div>
+      <div class="flex-shrink-0 w-full md:w-auto text-center">
         <a
           href="/Contacto"
-          class="inline-flex bg-blue-900 hover:bg-blue-950 items-center justify-center text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
+          class="inline-flex bg-blue-900 hover:bg-blue-950 items-center justify-center text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-md w-full md:w-auto"
         >
           Envía tu Historia
         </a>
       </div>
     </div>
+
   </div>
 </section>

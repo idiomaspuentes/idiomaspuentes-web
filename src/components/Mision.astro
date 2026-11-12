@@ -24,10 +24,21 @@ import { ArrowRight, BookOpen, Users, Compass, Flag } from "@lucide/astro";
           Desde el español o el portugués hacia sus lenguas maternas, fortaleciendo el liderazgo local con autonomía y rigor bíblico.
         </p>
       </div>
+
+      <!-- Enlace superior derecho -->
+      <div class="flex-shrink-0">
+        <a 
+          href="/Vision" 
+          class="inline-flex items-center text-sm font-semibold text-blue-900 hover:text-[#B35438] transition-colors duration-200 group"
+        >
+          Conoce más de la visión 
+          <ArrowRight class="ml-1.5 w-4 h-4 transition-transform group-hover:translate-x-1" />
+        </a>
+      </div>
     </div>
 
     <!-- Grid de Tarjetas / Pilares -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
       
       <!-- Pilar 01 -->
       <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between relative hover:shadow-md transition-shadow">
@@ -98,6 +109,17 @@ import { ArrowRight, BookOpen, Users, Compass, Flag } from "@lucide/astro";
         </div>
       </div>
 
+    </div>
+
+    <!-- Botón Inferior "Conoce más" -->
+    <div class="flex items-center justify-center">
+      <a
+        href="/Nosotros"
+        class="inline-flex bg-blue-900 hover:bg-blue-950 items-center justify-center text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-md"
+      >
+        Conoce más
+        <ArrowRight class="ml-2 w-5 h-5" />
+      </a>
     </div>
 
   </div>

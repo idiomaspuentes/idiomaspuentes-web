@@ -1,50 +1,90 @@
 ---
 import Redes from "./Tarjetas/TarjetaRed.astro";
-import { BookType, HandCoins } from "@lucide/astro";
+import { Users, Home, HeartHandshake } from "@lucide/astro";
 ---
 
-<section class="relative bg-blue-50/50 py-16 px-4">
-  <div class="container mx-auto text-center">
-    <h2 class="text-4xl font-serif font-bold text-gray-800">Red de Oración</h2>
-    <div class="bg-secondary w-24 h-1.5 mx-auto mt-4 mb-12 rounded-full"></div>
-    <p class="text-xl text-gray-600 mx-auto mb-16 leading-relaxed">
-      Únete a nuestra red global de intercesión y sé parte del avance de la
-      traducción bíblica a numerosos idiomas a través de la oración.
+<section class="relative bg-[#FCFBF9] py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    
+    <!-- Etiqueta Superior -->
+    <div class="inline-flex items-center gap-2 text-[#B35438] text-xs font-bold tracking-widest uppercase mb-3">
+      RED GLOBAL DE ORACIÓN
+    </div>
+
+    <!-- Título Principal -->
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-blue-950 mt-2 mb-4">
+      Únete a Nuestra Red de Intercesión
+    </h2>
+
+    <!-- Subtítulo / Descripción -->
+    <p class="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto mb-16 leading-relaxed">
+      Sé parte del avance de la traducción bíblica a numerosos idiomas a través del poder de la oración conjunta.
     </p>
 
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-8 max-w-6xl mx-auto"
-    >
-      <Redes
-        titulo="Ora por Traductores"
-        descripcion="Hay una necesidad creciente de traductores bilingües que traduzcan del inglés al español o al portugués, junto con especialistas en los idiomas bíblicos originales que aporten profundidad y precisión al proceso. Tu apoyo en oración puede abrir camino para que más personas respondan a este llamado."
-        ><BookType size="20" />
-      </Redes>
+    <!-- Cuadrícula de Tarjetas de Oración -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      
+      <!-- Tarjeta 1: Ora por Traductores -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Cabecera de Tarjeta: Icono y Título -->
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-[#B35438]">
+              <Users size="24" />
+            </div>
+            <h3 class="text-xl font-bold text-blue-950">
+              Ora por Traductores
+            </h3>
+          </div>
 
-      <Redes
-        titulo="Ora por las Comunidades"
-        descripcion="En Latinoamérica y en la Comunidad de países de lengua portuguesa, muchas lenguas indígenas siguen vivas en la voz de sus pueblos, pero aún esperan recibir la Palabra en el idioma que les es más íntimo y profundo. Acompaña en oración a estas comunidades."
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          ></path>
-        </svg></Redes
-      >
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Hay una necesidad creciente de traductores bilingües que traduzcan del inglés al español o al portugués, junto con especialistas en los idiomas bíblicos originales que aporten profundidad y precisión al proceso. Tu apoyo en oración abre caminos para que más obreros respondan.
+          </p>
+        </div>
+      </div>
 
-      <Redes
-        titulo="Ora por Recursos"
-        descripcion="Contribuye con tu oración para que Dios provea los recursos necesarios para el desarrollo del proyecto. Desde el sostenimiento de misioneros hasta la formación de nuevos traductores y especialistas, cada aporte es vital para que las comunidades indígenas reciban la Palabra en su idioma."
-        ><HandCoins size="20" />
-      </Redes>
+      <!-- Tarjeta 2: Ora por las Comunidades -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Cabecera de Tarjeta: Icono y Título -->
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-[#B35438]">
+              <Home size="24" />
+            </div>
+            <h3 class="text-xl font-bold text-blue-950">
+              Ora por las Comunidades
+            </h3>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed">
+            En Latinoamérica y en la Comunidad de países de lengua portuguesa, muchas lenguas indígenas siguen vivas en la voz de sus pueblos, pero aún esperan recibir la Palabra en el idioma que les es más íntimo y profundo. Acompaña con intercesión constante a estas familias.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Ora por Recursos -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Cabecera de Tarjeta: Icono y Título -->
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-[#B35438]">
+              <HeartHandshake size="24" />
+            </div>
+            <h3 class="text-xl font-bold text-blue-950">
+              Ora por Recursos
+            </h3>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Contribuye con tu oración para que Dios provea los recursos necesarios para el desarrollo del proyecto. Desde el sostenimiento de misioneros hasta la formación técnica de nuevos traductores y lingüistas, cada ofrenda es vital para avanzar sin demoras.
+          </p>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </section>

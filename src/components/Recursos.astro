@@ -1,102 +1,118 @@
 ---
 import Recurso from "./Tarjetas/TarjetaRecursos.astro";
+import { BookOpen, BookMarked, Users, FolderOpen, ArrowRight } from "@lucide/astro";
 ---
 
-<section class="relative bg-white py-16 px-4 sm:px-6 lg:px-8">
-  <div class="container mx-auto text-center">
-    <h2 class="text-4xl font-serif font-bold text-gray-800">
+<section class="relative bg-[#FCFBF9] py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    
+    <!-- Etiqueta Superior -->
+    <div class="inline-flex items-center gap-2 text-[#B35438] text-xs font-bold tracking-widest uppercase mb-3">
+      ECOSISTEMA LINGÜÍSTICO
+    </div>
+
+    <!-- Título Principal -->
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-blue-950 mt-2 mb-4">
       Recursos Disponibles
     </h2>
-    <div class="bg-secondary w-24 h-1.5 mx-auto mt-4 mb-12 rounded-full"></div>
-    <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed">
-      Herramientas y materiales para apoyar el trabajo de traducción bíblica y
-      el crecimiento de la iglesia.
+
+    <!-- Subtítulo / Descripción -->
+    <p class="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto mb-16 leading-relaxed">
+      Herramientas y materiales de libre acceso diseñados para apoyar el trabajo de traducción bíblica y el crecimiento integral de la iglesia.
     </p>
 
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-8 max-w-6xl mx-auto"
-    >
-      <Recurso
-        titulo="Los textos fuentes"
-        descripcion="Para dar vida a una traducción clara y fiel en su propio idioma, los traductores indígenas cuentan con dos versiones de la Biblia en español: el Texto Puente Literal (TPL), que conserva la forma del texto original, y el Texto Puente Simple (TPS), que expresa su mensaje con sencillez y profundidad."
-        explorar="Explorar"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-12 w-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-          ></path>
-        </svg></Recurso
-      >
+    <!-- Cuadrícula de Tarjetas de Recursos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+      
+      <!-- Recurso 1 -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Icono Superior -->
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center mb-6">
+            <BookOpen size="20" />
+          </div>
 
-      <Recurso
-        titulo="Las ayudas de traducción"
-        descripcion="Apoyo práctico y contextual para cada etapa de la traducción bíblica: Notas exegéticas, módulos de formación, términos clave del evangelio y preguntas de comprensión. Herramientas diseñadas para ayudar a los traductores indígenas a comunicar con claridad y fidelidad el mensaje de la Biblia."
-        explorar="Explorar"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-12 w-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-          ></path>
-        </svg></Recurso
-      >
+          <!-- Título -->
+          <h3 class="text-xl font-bold text-blue-950 mb-4">
+            Los textos fuentes
+          </h3>
 
-      <Recurso
-        titulo="Material de discipulado"
-        descripcion="Recursos que impulsan el crecimiento espiritual de la iglesia a través de enseñanzas bíblicas y herramientas prácticas que fortalecen la fe, promueven el liderazgo local y contribuyen al desarrollo de comunidades maduras, firmes en su compromiso con la Palabra."
-        explorar="Explorar"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-12 w-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          ></path>
-        </svg></Recurso
-      >
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed mb-8">
+            Para dar vida a una traducción clara y fiel en su propio idioma, los traductores indígenas cuentan con dos versiones de la Biblia en español: el <strong class="text-gray-900">Texto Puente Literal (TPL)</strong>, que conserva la forma del texto original, y el <strong class="text-gray-900">Texto Puente Simple (TPS)</strong>, que expresa su mensaje con sencillez y profundidad.
+          </p>
+        </div>
+
+        <!-- Pie de Tarjeta -->
+        <div class="pt-4 border-t border-gray-100">
+          <span class="text-xs font-semibold text-blue-900">TPL · TPS Disponibles</span>
+        </div>
+      </div>
+
+      <!-- Recurso 2 -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Icono Superior -->
+          <div class="w-10 h-10 rounded-xl bg-orange-50 text-[#B35438] flex items-center justify-center mb-6">
+            <BookMarked size="20" />
+          </div>
+
+          <!-- Título -->
+          <h3 class="text-xl font-bold text-blue-950 mb-4">
+            Las ayudas de traducción
+          </h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed mb-8">
+            Apoyo práctico y contextual para cada etapa: Notas exegéticas, módulos de formación, términos clave del evangelio y preguntas de comprobación de comprensión para comunicar con fidelidad el mensaje.
+          </p>
+        </div>
+
+        <!-- Pie de Tarjeta -->
+        <div class="pt-4 border-t border-gray-100">
+          <span class="text-xs font-semibold text-[#B35438]">Notas Exegéticas & Glosarios</span>
+        </div>
+      </div>
+
+      <!-- Recurso 3 -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Icono Superior -->
+          <div class="w-10 h-10 rounded-xl bg-orange-50 text-[#B35438] flex items-center justify-center mb-6">
+            <Users size="20" />
+          </div>
+
+          <!-- Título -->
+          <h3 class="text-xl font-bold text-blue-950 mb-4">
+            Material de discipulado
+          </h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed mb-8">
+            Recursos que impulsan el crecimiento espiritual de la iglesia local a través de enseñanzas bíblicas que fortalecen la fe, promueven el liderazgo nativo y nutren comunidades maduras.
+          </p>
+        </div>
+
+        <!-- Pie de Tarjeta -->
+        <div class="pt-4 border-t border-gray-100">
+          <span class="text-xs font-semibold text-[#B35438]">Guías de Madurez y Estudio</span>
+        </div>
+      </div>
+
     </div>
 
-    <div class="mt-20 text-center">
+    <!-- Botón Inferior Estilizado -->
+    <div class="flex items-center justify-center">
       <a
         href="/Recursos"
-        class="inline-flex bg-blue-800 hover:bg-blue-900 items-center justify-center text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
+        class="inline-flex items-center gap-3 bg-white hover:bg-orange-50/50 text-blue-950 font-semibold py-4 px-8 rounded-2xl transition-all duration-200 border border-orange-200/60 shadow-sm group"
       >
-        Ver todos los Recursos
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 ml-2"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
+        <div class="w-8 h-8 rounded-lg bg-orange-50 text-[#B35438] flex items-center justify-center">
+          <FolderOpen size="16" />
+        </div>
+        <span>Ver biblioteca completa de Recursos</span>
       </a>
     </div>
+
   </div>
 </section>

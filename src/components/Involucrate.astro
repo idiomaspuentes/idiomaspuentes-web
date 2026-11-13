@@ -1,118 +1,140 @@
 ---
 import Involucrense from "./Tarjetas/TarjetaInvolucrate.astro";
-import { HeartHandshake, HandHelping, UsersRound } from "@lucide/astro";
+import { Heart, DollarSign, Users, Mail, HeartHandshake, ArrowRight } from "@lucide/astro";
 ---
 
-<section class="relative bg-gray-100/70 py-16 px-4 sm:px-6 lg:px-8">
-  <div class="container mx-auto text-center">
-    <h2 class="text-4xl font-serif font-bold text-gray-800">Involúcrate</h2>
-    <div class="bg-secondary w-24 h-1.5 mx-auto mt-4 mb-12 rounded-full"></div>
-    <p class="text-xl max-w-3xl mx-auto mb-16 text-gray-700">
-      Hay muchas maneras de ser parte de esta misión transformadora. <br/>Descubre
-      cómo puedes contribuir.
+<section class="relative bg-[#FCFBF9] py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    
+    <!-- Título Principal -->
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-blue-950 mb-4">
+      Formas de Involúcrate
+    </h2>
+
+    <!-- Subtítulo / Descripción -->
+    <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
+      Hay muchas maneras de ser parte de esta misión transformadora.
     </p>
 
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-8 max-w-6xl mx-auto"
-    >
-      <Involucrense
-        titulo="Orando"
-        descripcion="Únete a nuestra red de oración y apoya el trabajo de traducción bíblica a través de la intercesión."
-        saber="Saber más"
-        link="orando"
-      >
-        <div class="text-blue-900">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10"
-            viewBox="0 0 24 24"
-            ><g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              color="currentColor"
-              ><path
-                d="M15.5 15L14 10.5c-1.657 0-2 1.343-2 3V15m-3.5 0l1.5-4.5c1.657 0 2 1.343 2 3V15"
-              ></path><path
-                d="M21.978 22c-1.15-.67-3.086-2.186-5.69-1.992c-.659.049-.989.074-1.29.05a3 3 0 0 1-.327-.029C13.139 19.674 12 18.336 12 16.74V3.196a1.197 1.197 0 0 1 2.304-.453l2.718 6.644c1.066 2.605 1.599 3.907 2.528 4.577c.057.042.163.113.223.15c.971.606 1.39.606 2.227.606M2.022 22c1.15-.67 3.086-2.186 5.69-1.992c.659.049.989.074 1.29.05s.31-.025.327-.029C10.861 19.675 12 18.336 12 16.74V3.196a1.197 1.197 0 0 0-2.304-.453L6.978 9.388c-1.066 2.605-1.599 3.908-2.528 4.577a5 5 0 0 1-.223.15c-.971.606-1.39.606-2.227.606"
-              ></path></g
-            ></svg
-          >
-        </div>
-      </Involucrense>
+    <!-- Cuadrícula de Tarjetas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+      
+      <!-- Tarjeta 1: Orando -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Icono Superior -->
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center mb-6">
+            <Heart size="20" />
+          </div>
 
-      <Involucrense
-        titulo="Donando"
-        descripcion="Tu donación hace posible la traducción bíblica y el crecimiento de la iglesia en comunidades necesitadas."
-        saber="Saber más"
-        link="donando"
-      >
-        <div class="text-blue-900">
-          <HandHelping size="40" />
-        </div>
-      </Involucrense>
+          <!-- Título -->
+          <h3 class="text-xl font-bold text-blue-950 mb-3">
+            Orando
+          </h3>
 
-      <Involucrense
-        titulo="Sirviendo"
-        descripcion="Explora oportunidades para servir como traductor, capacitador o en otros roles clave."
-        saber="Saber más"
-        link="sirviendo"
-        ><div class="text-blue-900">
-          <UsersRound size="35" />
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed mb-8">
+            Únete a nuestra red de oración mensual y respalda el trabajo de traducción bíblica a través de motivos específicos compartidos desde el campo.
+          </p>
         </div>
-      </Involucrense>
-    </div>
 
-    <div
-      class="bg-blue-950 rounded-2xl mt-20 justify-self-center items-center px-4 py-6 box-border w-full max-w-170"
-    >
-      <h1 class="text-white font-bold text-2xl mt-4">
-        ¿Listo para hacer la diferencia?
-      </h1>
-      <h2
-        class="text-white mt-4 px-4 max-w-2xl text-center justify-self-center"
-      >
-        Tu participación puede transformar vidas y comunidades. Únete a nosotros
-        en esta misión de llevar la Palabra de Dios a todos los idiomas.
-      </h2>
-
-      <div class="flex justify-center md:gap-4 gap-1 md:flex-row flex-col">
-        <div class="mt-10 text-center">
-          <a
-            href="/Contacto"
-            class="inline-flex bg-white hover:bg-gray-200 items-center justify-center text-black font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
-          >
-            Contáctanos
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 ml-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-              ></path>
-            </svg>
-          </a>
-        </div>
-        <div class="md:mt-10 mt-8 text-center">
-          <a
-            href="/Involucrate"
-            class="inline-flex bg-secondary hover:bg-teal-600 text-shadow-lg items-center justify-center text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
-          >
-            Involúcrate
-            <div class="ml-2">
-              <HeartHandshake size="20" />
-            </div>
+        <!-- Enlace Inferior -->
+        <div class="pt-4 border-t border-gray-100">
+          <a href="/Involucrate#orando" class="text-xs font-semibold text-blue-900 hover:text-[#B35438] transition-colors inline-flex items-center gap-1">
+            Saber más sobre Oración <ArrowRight size="14" />
           </a>
         </div>
       </div>
+
+      <!-- Tarjeta 2: Donando -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Icono Superior -->
+          <div class="w-10 h-10 rounded-xl bg-orange-50 text-[#B35438] flex items-center justify-center mb-6">
+            <DollarSign size="20" />
+          </div>
+
+          <!-- Título -->
+          <h3 class="text-xl font-bold text-blue-950 mb-3">
+            Donando
+          </h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed mb-8">
+            Tu donación regular o única hace posible la traducción bíblica, la provisión tecnológica y el equipamiento integral de las iglesias locales en necesidad.
+          </p>
+        </div>
+
+        <!-- Enlace Inferior -->
+        <div class="pt-4 border-t border-gray-100">
+          <a href="/Involucrate#donando" class="text-xs font-semibold text-blue-900 hover:text-[#B35438] transition-colors inline-flex items-center gap-1">
+            Saber más sobre Donar <ArrowRight size="14" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Sirviendo -->
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between text-left relative">
+        <div>
+          <!-- Icono Superior -->
+          <div class="w-10 h-10 rounded-xl bg-orange-50 text-[#B35438] flex items-center justify-center mb-6">
+            <Users size="20" />
+          </div>
+
+          <!-- Título -->
+          <h3 class="text-xl font-bold text-blue-950 mb-3">
+            Sirviendo
+          </h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-600 text-sm leading-relaxed mb-8">
+            Explora oportunidades para servir como traductor profesional, asesor teológico, diseñador pedagógico, capacitador o voluntario de campo.
+          </p>
+        </div>
+
+        <!-- Enlace Inferior -->
+        <div class="pt-4 border-t border-gray-100">
+          <a href="/Involucrate#sirviendo" class="text-xs font-semibold text-blue-900 hover:text-[#B35438] transition-colors inline-flex items-center gap-1">
+            Saber más sobre Servir <ArrowRight size="14" />
+          </a>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Banner Inferior Estilizado -->
+    <div class="bg-gradient-to-r from-blue-950 via-blue-900 to-blue-950 rounded-3xl p-8 sm:p-12 max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl text-left relative overflow-hidden">
+      
+      <div class="max-w-xl">
+        <span class="text-[10px] font-bold tracking-widest text-[#D97757] uppercase mb-2 block">
+          EL MOMENTO ES AHORA
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-3">
+          ¿Listo para hacer la diferencia?
+        </h3>
+        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+          Tu participación puede transformar vidas y comunidades enteras. Únete a nosotros en esta bendita misión de llevar la Palabra de Dios a cada lengua y corazón.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 flex-shrink-0 w-full lg:w-auto">
+        <a
+          href="/Contacto"
+          class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-blue-950 font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-md w-full sm:w-auto text-sm"
+        >
+          <Mail size="16" />
+          Contáctanos
+        </a>
+        <a
+          href="/Involucrate"
+          class="inline-flex items-center justify-center gap-2 bg-[#B35438] hover:bg-[#96432b] text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-md w-full sm:w-auto text-sm"
+        >
+          <HeartHandshake size="16" />
+          Donar ahora
+        </a>
+      </div>
+
+    </div>
+
   </div>
 </section>
